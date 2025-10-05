@@ -17,11 +17,15 @@ services:
     image: openhab/openhab:4.2.0
     container_name: openhab
     restart: unless-stopped
-    network_mode: host
+    # ❗ อย่าใช้ network_mode: host บน Render หรือ VPS เด็ดขาด
+    # เพราะมันจะชนกับพอร์ตของ container อื่น
+    ports:
+      - "8080:8080"
+      - "8443:8443"
     environment:
-      - USER_ID=9001
-      - GROUP_ID=9001
-      - TZ=Asia/Bangkok
+      USER_ID: "9001"
+      GROUP_ID: "9001"
+      TZ: "Asia/Bangkok"
     volumes:
       - ./openhab_addons:/openhab/addons
       - ./openhab_conf:/openhab/conf
