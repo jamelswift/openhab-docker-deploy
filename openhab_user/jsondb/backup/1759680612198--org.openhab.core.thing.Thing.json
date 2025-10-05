@@ -1,0 +1,32 @@
+{
+  "mqtt:broker:aa7db9f00e": {
+    "class": "org.openhab.core.thing.internal.ThingStorageEntity",
+    "value": {
+      "isBridge": true,
+      "channels": [],
+      "label": "MQTT Broker",
+      "configuration": {
+        "birthRetain": true,
+        "certificatepin": true,
+        "clientid": "e7a88496-1bc8-48fc-bc68-b98a4908ce84",
+        "enableDiscovery": true,
+        "host": "host.docker.internal",
+        "hostnameValidated": true,
+        "keepAlive": 60,
+        "lwtQos": 0,
+        "lwtRetain": true,
+        "mqttVersion": "V3",
+        "port": 1883,
+        "protocol": "TCP",
+        "publickeypin": true,
+        "qos": 0,
+        "reconnectTime": 60000,
+        "secure": false,
+        "shutdownRetain": true
+      },
+      "properties": {},
+      "UID": "mqtt:broker:aa7db9f00e",
+      "thingTypeUID": "mqtt:broker"
+    }
+  }
+}

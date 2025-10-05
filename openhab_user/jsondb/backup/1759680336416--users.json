@@ -1,0 +1,26 @@
+{
+  "Jamel": {
+    "class": "org.openhab.core.auth.ManagedUser",
+    "value": {
+      "name": "Jamel",
+      "passwordHash": "ud2N5sacTGxjyv5SBpDn5LX2eQuyyleMuI4KoiIOI5GuC+iDQaWQONfm6/22qaqR/JZJ37Vj+VDtV4Ha5cSKgg\u003d\u003d",
+      "passwordSalt": "BnO1GSCgdSQjAjnwSORylKIGJ70e/SXV6EpHED7Gz7i0clvmUZrwA32FjeMyLENOudQQ+HySC6o1QeNmatJp8A\u003d\u003d",
+      "roles": [
+        "administrator"
+      ],
+      "sessions": [
+        {
+          "sessionId": "53c071fa-8f5c-4c0b-84b3-6e36ff45ea88",
+          "refreshToken": "0e9fc493f95142689fd7ee08c49d2f52",
+          "createdTime": "Oct 5, 2025, 11:05:35 PM",
+          "lastRefreshTime": "Oct 5, 2025, 11:05:35 PM",
+          "clientId": "http://localhost:8080",
+          "redirectUri": "http://localhost:8080",
+          "scope": "admin",
+          "sessionCookie": true
+        }
+      ],
+      "apiTokens": []
+    }
+  }
+}

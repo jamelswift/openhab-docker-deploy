@@ -1,0 +1,21 @@
+{
+  "Temperature_Value -\u003e mqtt:topic:0ed099dc9d:7c3998f5af:temperature": {
+    "class": "org.openhab.core.thing.link.ItemChannelLink",
+    "value": {
+      "channelUID": {
+        "segments": [
+          "mqtt",
+          "topic",
+          "0ed099dc9d",
+          "7c3998f5af",
+          "temperature"
+        ],
+        "uid": "mqtt:topic:0ed099dc9d:7c3998f5af:temperature"
+      },
+      "configuration": {
+        "properties": {}
+      },
+      "itemName": "Temperature_Value"
+    }
+  }
+}
