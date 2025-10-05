@@ -3,7 +3,7 @@ version: "3.8"
 services:
   # 🧠 MQTT Broker
   mqtt:
-    image: eclipse-mosquitto
+    image: eclipse-mosquitto:2
     container_name: mqtt
     ports:
       - "1883:1883"
@@ -12,25 +12,20 @@ services:
       - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
     restart: always
 
-  # 💡 openHAB
+  # 💡 openHAB (ใช้ image สำเร็จรูปที่มี Java แล้ว)
   openhab:
-    image: openhab/openhab:5.0.1
+    image: openhab/openhab:4.2.0
     container_name: openhab
-    restart: always
-    ports:
-      - "8080:8080"
-      - "8443:8443"
+    restart: unless-stopped
+    network_mode: host
     environment:
-      CRYPTO_POLICY: "unlimited"
-      EXTRA_JAVA_OPTS: "-Duser.timezone=Asia/Bangkok"
-      OPENHAB_HTTP_PORT: "8080"
-      OPENHAB_HTTPS_PORT: "8443"
+      - USER_ID=9001
+      - GROUP_ID=9001
+      - TZ=Asia/Bangkok
     volumes:
       - ./openhab_addons:/openhab/addons
       - ./openhab_conf:/openhab/conf
       - ./openhab_user:/openhab/userdata
-      - /etc/localtime:/etc/localtime:ro
-      - /etc/timezone:/etc/timezone:ro
 
   # 💾 MongoDB (ฐานข้อมูล)
   mongodb:
